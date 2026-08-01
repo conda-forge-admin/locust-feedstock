@@ -5,7 +5,7 @@ schema_version: 1
 # https://gist.github.com/bollwyvl/d6041fcf86348ca719cf925b6d045aca
 
 context:
-  version: "2.46.2"
+  version: "2.46.3"
   python_min: "3.11"
   python_check_max: "3.14"
 
@@ -15,10 +15,10 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/l/locust/locust-${{ version }}.tar.gz
-    sha256: 8792329639c5b4491c1d29458280daf80eee68e0acd5847b60f529bf092e8f08
+    sha256: b1d313db9df0a4036d4d905b1dc8585d020a7299239a1bb2e2885b71389253c0
     target_directory: dist
   - url: https://github.com/locustio/locust/archive/refs/tags/${{ version }}.tar.gz
-    sha256: f7e31f286c72d0dcbd74474a6fa55766faf143e591058affa40ddc8038c67023
+    sha256: 5837b399c3542173ba59ab5f6627fdff79fa0b9af8a618ec60852fb29a827a7f
     target_directory: src
 
 build:
