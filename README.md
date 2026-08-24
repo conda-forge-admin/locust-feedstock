@@ -160,31 +160,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `locust, locust-with-all, locust-with-dns, locust-with-milvus, locust-with-mqtt, locust-with-otel, locust-with-qdrant` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install locust locust-with-all locust-with-dns locust-with-milvus locust-with-mqtt locust-with-otel locust-with-qdrant
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install locust locust-with-all locust-with-dns locust-with-milvus locust-with-mqtt locust-with-otel locust-with-qdrant
 ```
 
-It is possible to list all of the versions of `locust` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add locust locust-with-all locust-with-dns locust-with-milvus locust-with-mqtt locust-with-otel locust-with-qdrant
+# for installing globally
+pixi global install locust locust-with-all locust-with-dns locust-with-milvus locust-with-mqtt locust-with-otel locust-with-qdrant
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `locust` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search locust --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search locust --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search locust --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -196,6 +238,8 @@ mamba repoquery whoneeds locust --channel conda-forge
 # List dependencies of `locust`:
 mamba repoquery depends locust --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -266,7 +310,4 @@ Feedstock Maintainers
 
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@carlodri](https://github.com/carlodri/)
-
-
-<!-- dummy commit to enable rerendering -->
 
